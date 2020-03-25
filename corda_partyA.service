@@ -1,0 +1,13 @@
+[Unit]
+Description=Corda PartyA Node - Token Transaction
+Requires=network.target
+
+[Service]
+Type=simple
+User=hltesting
+WorkingDirectory=/opt/corda/PartyA
+ExecStart=/usr/bin/java -jar /opt/corda/PartyA/cordapps/corda-4.1.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

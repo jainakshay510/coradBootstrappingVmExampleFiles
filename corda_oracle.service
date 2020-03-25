@@ -1,0 +1,13 @@
+[Unit]
+Description=Corda Oracle  Node - Token Transaction
+Requires=network.target
+
+[Service]
+Type=simple
+User=hltesting
+WorkingDirectory=/opt/corda/Oracle
+ExecStart=/usr/bin/java -jar /opt/corda/Oracle/cordapps/corda-4.1.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
